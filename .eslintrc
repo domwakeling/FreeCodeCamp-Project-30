@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:meteor/recommended"
+  ],
+  "parserOptions": {
+    "allowImportExportEverywhere": true
+  },
+  "plugins": [
+    "meteor"
+  ],
+  "settings": {
+    "import/resolver": "meteor"
+  },
+  "rules": {
+    "class-methods-use-this": "off",
+    "comma-dangle": ["error", "never"],
+    "import/extensions": ["off", "never"],
+    "indent": ["error", 4],
+    "no-underscore-dangle": ["error", { "allow": ["_id"]}],
+    "react/jsx-filename-extension": ["warn", { "extensions": [ ".js", ".jsx"] } ],
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-indent-props": ["error", 4],
+    "react/prefer-stateless-function": "off",
+    "jsx-a11y/anchor-is-valid": ["error", { "components": ["Link"], "specialLink": ["to"] }]
+  }
+}

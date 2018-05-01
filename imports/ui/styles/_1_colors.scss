@@ -1,0 +1,17 @@
+$color__project-theme: #78C21E;
+// $color__project-contrast: hsl(33, 89%, 55%);
+$color__project-inverse: lighten($color__project-theme, 68%);
+
+$color__default: #3458CC;
+
+$color__bg-color: lighten($color__project-theme, 60%);
+$color__mid-grey: #666;
+$color__light-grey: #999;
+$color__very-light-grey: #ddd;
+$color__dark-grey: #333;
+$color__alert: lighten(#8F2408, 12%);
+
+$color__body-font-color: darken($color__project-theme, 28%);
+$color__title-font-color: $color__project-theme;
+$color__link-font-color: desaturate($color__project-theme, 3%);
+$color__link-font-color-alt: darken($color__project-theme, 10%);

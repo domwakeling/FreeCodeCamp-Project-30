@@ -1,0 +1,25 @@
+/* <div.left404> contains the '404', <div.right404> the 'Not Found' message, <div.text404>
+ * the 'sorry not found' text  */
+
+ /* float the .left404,.right404 left with top margin and some padding ... */
+.left404, .right404 {
+    margin: 1.0em 0 0 0;
+    padding: 0.5em;
+    float: left;
+    h1 {
+        font-weight: 300;
+    }
+}
+/* add a left margin to the .left404 and .text404 (which is aligned underneath) */
+.left404, .text404 {
+    margin-left: 2.0em;
+}
+/* add a border-left to .right404, which (with the padding) makes a nice vertical line */
+.right404 {
+    border-left: $color__project-theme 2px solid;
+}
+/* give .text404 same padding as .left404 and clear the floats so it aligns below */
+.text404 {
+    padding: 0.5em;
+    clear: both;
+}

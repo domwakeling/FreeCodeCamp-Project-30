@@ -1,0 +1,29 @@
+$structure__font-pad_horiz: 10px;
+$structure__container-pad-bottom: 20px;
+
+@mixin containerWidthAndMarginForLandscapeUp {
+    width: 890px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: $color__bg-color;
+}
+
+.container {
+    padding: 0 $structure__font-pad_horiz $structure__container-pad-bottom;
+
+    @include for-tablet-landscape-up {
+        @include containerWidthAndMarginForLandscapeUp;
+        padding: 0 0 $structure__container-pad-bottom;
+    }
+}
+
+.topNavContainer {
+    padding: 0 $structure__font-pad_horiz 0;
+
+    @include for-tablet-landscape-up {
+        @include containerWidthAndMarginForLandscapeUp;
+        padding: 0;
+    }
+}

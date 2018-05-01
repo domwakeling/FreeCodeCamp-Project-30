@@ -1,0 +1,12 @@
+a {
+    text-decoration: none;
+    color: $color__link-font-color;
+
+    &:hover {
+        color: $color__link-font-color-alt;
+    }
+
+    &.monoFontLink {
+        font-family: 'New Courier', Courier, monospace;
+    }
+}

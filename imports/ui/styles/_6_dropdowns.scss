@@ -1,0 +1,39 @@
+/* the container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    right: 0;
+}
+
+/* dropdown content (hidden by default) */
+.dropdown-content {
+    position: absolute;
+    background-color: $color__bg-color;
+    border-radius: 0.35em;
+    // min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 2.6em;
+    z-index: 1;
+    cursor: pointer;
+
+    form {
+        padding: 0.3em;
+        border-radius: 0.25em;
+        border: 1px solid $color__project-theme;
+
+        input[type="text"] {
+            font-size: $font__forms-size;
+            padding: 0.3em;
+            border-radius: 0.25em;
+            border: 1px solid $color__project-theme;
+            margin: 0.3em 0;
+            width: 20em;
+        }
+    }
+
+    // #field-message {
+    //     display: inline-block;
+    //     margin-left: 0.75em;
+    // }
+
+}

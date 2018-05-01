@@ -1,0 +1,57 @@
+$navbar__bgcolor: $color__project-theme;
+$navbar__bgcolor-selected: desaturate($navbar__bgcolor, 15%);
+$navbar__color: $color__project-inverse;
+$navbar__link-color: $color__project-inverse;
+
+.topNav {
+    /* background & basic colors */
+    color: $navbar__color;
+    background-color: $navbar__bgcolor;
+    min-height: 2.6em;
+    margin-bottom: 0.4em;
+
+    /* fix spacing issues so navbar height is correct */
+    line-height: 1.0;
+
+    /* basic styling for links */
+    a {
+        float: left;
+        text-decoration: none !important;
+        color: $navbar__link-color;
+        padding: 0.8em 0.8em;
+
+        /* add feature color to current page, using NavLink from React-Router */
+        &.selectedPage {
+            background-color: $navbar__bgcolor-selected;
+        }
+
+        /* hide everything except first link (brand) when in small mode */
+        &:not(:first-child) {
+            @include for-phone-only {
+                display: none;
+            }
+        }
+
+        /* align first link (brand) and last (sign-in or hamburger) edges of container */
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    div#login-buttons {
+        float: right;
+        padding-top: 0.5em;
+
+        .login-button {
+            background-color: $color__project-theme !important;
+            border-color: $navbar__color;
+        }
+
+        #login-buttons-image-twitter {
+            background-image: url('/images/twitter_logo_white.png');
+        }
+    }
+}
