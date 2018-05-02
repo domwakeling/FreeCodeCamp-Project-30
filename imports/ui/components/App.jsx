@@ -8,7 +8,7 @@ import Cards from '../../api/cards.js';
 
 import Copyright from './Copyright.jsx';
 import Navbar from './Navbar.jsx';
-import AddImage from './AddImage.jsx';
+import AddImageWithWrapper from './AddImage.jsx';
 
 import Home from '../pages/Home.jsx';
 import NoMatch from '../pages/NoMatch.jsx';
@@ -21,7 +21,7 @@ class App extends React.Component {
                 <div>
                     <Navbar user={this.props.user} />
                     <div className="container">
-                        <AddImage userId={userId} />
+                        <AddImageWithWrapper userId={userId} />
                         <Switch>
                             {/* <Route exact path="/" component={Home} /> */}
                             <Route

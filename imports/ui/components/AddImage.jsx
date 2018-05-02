@@ -125,11 +125,13 @@ export class AddImage extends React.Component {
 
 AddImage.propTypes = {
     userId: PropTypes.string,
-    history: PropTypes.shape()
+    history: PropTypes.shape().isRequired
 };
 
 AddImage.defaultProps = {
     userId: null
 };
 
-export default withRouter(AddImage);
+const AddImageWithWrapper = withRouter(AddImage);
+
+export default AddImageWithWrapper;

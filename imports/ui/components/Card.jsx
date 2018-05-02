@@ -57,7 +57,7 @@ export default class Card extends React.Component {
                     <div className="card-likes-count">{this.props.likes}</div>
                     {/* eslint-disable-next-line */}
                     <a onClick={this.likeHandler}>
-                        <div className={likeClass}>&hearts;</div>
+                        <i className={`fa fa-heart fa-2x ${likeClass}`} />
                     </a>
                     <div className="button-wrapper">
                         {Meteor.userId() === this.props.userId ? (

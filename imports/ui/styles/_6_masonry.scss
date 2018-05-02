@@ -34,11 +34,12 @@ div.card-wrapper {
             padding-bottom: 0.5em;
         }
 
-        div.card-likes {
+        .card-likes {
             float:right;
             color: $color__alert;
-            font-size: 4.0rem;
-            line-height: 0.8em;
+            // font-size: 4.0rem;
+            // line-height: 0.8em;
+            padding: 0.4em 0.15em 0 0;
             cursor: not-allowed;
             
             &.live {
