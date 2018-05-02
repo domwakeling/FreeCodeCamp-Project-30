@@ -30,11 +30,9 @@ export default class AddImage extends React.Component {
         if (url.match(g1)) {
             // eslint-disable-next-line prefer-destructuring
             url2 = url.match(g1)[1].replace(/%3A/g, ':').replace(/%2F/g, '/');
-            console.log(url2);
         } else if (url.match(g2)) {
             // eslint-disable-next-line prefer-destructuring
             url2 = url.match(g1)[1].replace(/%3A/g, ':').replace(/%2F/g, '/');
-            console.log(url2);
         }
         // define two matching sets - one with, one without http(s):// ...
         const p1 = /^https?:\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-/]))?$/;
