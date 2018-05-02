@@ -1,5 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { Bert } from 'meteor/themeteorchef:bert';
@@ -45,14 +46,14 @@ export default class Card extends React.Component {
                         alt={this.props.description}
                     />
                     <div className="card-description">{this.props.description}</div>
-                    <a href={`/user/${this.props.username}`} >
+                    <Link to={`/user/${this.props.username}`} >
                         <img
                             // onClick={this.userClickHandler}
                             className="user-image"
                             src={this.props.userImageURL}
                             alt={this.props.username}
                         />
-                    </a>
+                    </Link>
                     <div className="card-likes-count">{this.props.likes}</div>
                     {/* eslint-disable-next-line */}
                     <a onClick={this.likeHandler}>

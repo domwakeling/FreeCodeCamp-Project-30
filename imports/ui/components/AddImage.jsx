@@ -1,9 +1,10 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import { Bert } from 'meteor/themeteorchef:bert';
 
-export default class AddImage extends React.Component {
+export class AddImage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -69,6 +70,7 @@ export default class AddImage extends React.Component {
                     this.field_url.current.value = '';
                     this.field_description.current.value = '';
                     this.setState({ dropdownVisible: false });
+                    this.props.history.push('/');
                 }
             });
         }
@@ -122,9 +124,12 @@ export default class AddImage extends React.Component {
 }
 
 AddImage.propTypes = {
-    userId: PropTypes.string
+    userId: PropTypes.string,
+    history: PropTypes.shape()
 };
 
 AddImage.defaultProps = {
     userId: null
 };
+
+export default withRouter(AddImage);

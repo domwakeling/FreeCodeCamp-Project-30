@@ -8,7 +8,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import { assert } from 'chai';
 import { sinon } from 'meteor/practicalmeteor:sinon';
 
-import AddImage from './AddImage.jsx';
+import { AddImage } from './AddImage.jsx';
 
 Enzyme.configure({ adapter: new Adapter() });
 
