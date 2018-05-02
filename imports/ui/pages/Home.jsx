@@ -35,7 +35,7 @@ export default class Home extends React.Component {
     renderCards() {
         return (
             <ul>
-                {this.props.cards.filter((card) => {
+                {this.props.cards.sort((a, b) => a.createdAt < b.createdAt).filter((card) => {
                     const path = this.props.history.location.pathname;
                     const len = '/user/'.length;
                     const name = path.length > len ? path.substr(len) : '';
@@ -60,7 +60,7 @@ export default class Home extends React.Component {
         this.renderCards = this.renderCards.bind(this);
         const path = this.props.history.location.pathname;
         const len = '/user/'.length;
-        const title = path.length > len ? `User: ${path.substr(len)}` : 'Home';
+        const title = path.length > len ? `by @${path.substr(len)}` : 'Home';
         return (
             <div>
                 <h2>{title}</h2>

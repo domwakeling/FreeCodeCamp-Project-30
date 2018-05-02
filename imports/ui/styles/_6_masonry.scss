@@ -17,6 +17,7 @@ div.card-wrapper {
         border-radius: 0.25em;
         border: 1px solid $color__project-theme;
         padding: 0.5em;
+        background-color: lighten( desaturate($color__project-theme, 60%), 55%);
 
         img.card-image {
             max-width: 100%;
@@ -38,6 +39,7 @@ div.card-wrapper {
             color: $color__alert;
             font-size: 4.0rem;
             line-height: 0.8em;
+            cursor: not-allowed;
             
             &.live {
                 cursor: pointer;
