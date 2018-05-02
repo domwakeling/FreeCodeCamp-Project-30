@@ -30,10 +30,15 @@ describe('AddImage url validation', () => {
         const correctedAddress = `http://${validNoHttpAddress}`;
         assert.equal(urlCheck(validNoHttpAddress), correctedAddress);
     });
-    it('should reject if no file extension', () => {
-        const noExtension = 'http://mysite/bling';
-        assert.equal(urlCheck(noExtension), false);
+    it('should de-google a google link', () => {
+        const googleAddress = 'https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F84%2FSki_Famille_-_Family_Ski_Holidays.jpg&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSkiing&docid=hczOo4bK1gUaoM&tbnid=ySBZ8ievxphw5M%3A&vet=10ahUKEwiw0eWXr-baAhWlDsAKHUpzA5sQMwifAigAMAA..i&w=1344&h=751&hl=en-gb&client=safari&bih=622&biw=414&q=skiing&ved=0ahUKEwiw0eWXr-baAhWlDsAKHUpzA5sQMwifAigAMAA&iact=mrc&uact=8';
+        const correctAddress = 'https://upload.wikimedia.org/wikipedia/commons/8/84/Ski_Famille_-_Family_Ski_Holidays.jpg';
+        assert.equal(urlCheck(googleAddress), correctAddress);
     });
+    // it('should reject if no file extension', () => {
+    //     const noExtension = 'http://mysite/bling';
+    //     assert.equal(urlCheck(noExtension), false);
+    // });
 });
 
 describe('AddImage navbar element', () => {
