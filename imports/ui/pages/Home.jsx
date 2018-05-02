@@ -68,6 +68,7 @@ export default class Home extends React.Component {
                     // eslint-disable-next-line func-names
                     ref={function (c) { this.masonry = this.masonry || c.masonry; }.bind(this)}
                     options={masonryOptions}
+                    updateOnEachImageLoad
                 >
                     {this.renderCards()}
                 </Masonry>
